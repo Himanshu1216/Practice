@@ -1,0 +1,66 @@
+we will get to know how we can use git in our terminal to 
+version control, clone, pull request, merge, fork
+
+#version control
+starting file                      some changes                     some changes
+1st savepoint(1st version)        2nd savepoint(2nd version)       3rd savepoint(3rd version)
+if anything bad happens and I want to get back to some previous version we can do that using git version control
+
+git init     ls -a (to see hidden files also .git is a hidden file)
+it will initialise .git in our current directory which will be used to commit all the changes, commit all the changes.
+
+#process
+1. add that directory to staging area(intermediate place where we can choose and pick which file in our working directory to be commit)
+git status (to get which files are in our staging area);
+untracked files means which are in our working directory but not being tracked.
+
+2.to add in staging area and start tracking changes in it (git add fileName)
+now in staging area and ready to be commited.
+
+3.commit
+git commit -m "Complete chapter1" //try to write message in present tense(completing the chapter1 with this commit or with this savepoint);
+// to see commits that we have made git log
+// git add . to add all the files in the staging area.
+
+4. if by mistake we made unwanted changes in our file
+git diff chapter3.txt(to see the modifications)
+git checkout chapter3.txt(to update the file to last saved version)
+
+why staging area? to have a control which to be commit and which one just to stay there.
+
+
+#GIT REMOTE REPOSITORIES
+repositeries that are hosted on someone else computer or server by using github.
+working directory -> staging area -> local repository -> remote repository.
+we want to push these local commits or local repositeries onto remote repositeries on github.
+
+1. create a remote repository
+git remote add origin (url of remote repository on github).
+2. push local repository on remote repository.
+git push -u origin main (going to push local repositeries from main branch to origin remote branch).
+#main branch contains all the commits made. We can keep local repository in parallel to remote repository. In our case .git is local repository while github is remote repository.
+
+#GIT IGNORE
+choose which files not to track.
+1. touch .gitignore(hidden file)(here we add the files to be ignored when we commit the project);
+2. git init (will create empty git repository)
+3. git add . (to add all the files in the current directory to the staging area).
+4. (git rm --cached -r .)to remove all the fiels
+
+#GIT CLONE
+how to download and create a copy of a repository.
+cloning of remote repository on github to pull it to local repository on our computer.
+git clone url(of the repository we want to clone on our local computer).
+
+#BRANCHING AND MERGING
+how to use branches to develop feature and collaborate on a database.
+we can create side branch also apart from main branch(like for experiment purpose). if results are great and want to merge it with main branch then(-> git merge name-of-branch) and using this can bring all the changes to main working branch.
+1. git branch branch-name
+2. to get list of side branches -> git branch
+3. to swithch to side branch -> git checkout side-branch-name(inside this branch we'll going to make some changes.)
+okay satisfied with the experiments, how to merge it with the main branch?
+4. -> git merge side-branch-name(once done :q! to exit);(using this main branch has absorbed the changes from alien branch)
+
+
+#FORKING AND PULL REQUESTS
+how to suggest code changes and contribute to open source project.
