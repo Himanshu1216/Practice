@@ -1,12 +1,16 @@
 import StarRating from "./components/star-rating"
 import './App.css'
-import Otp from "./otp"
+import Otp from "./components/otp"
+import InfiniteScroll from "./components/Infinite-scroll/infinite-scroll"
+import Counter from "./components/counter"
 
 function App() {
     return (
-      <div className="container">
+      <div>
         {/* <StarRating starCount={10}/> */}
-        <Otp />
+        {/* <Otp /> */}
+        <InfiniteScroll />
+        {/* <Counter /> */}
       </div>
     )
 }

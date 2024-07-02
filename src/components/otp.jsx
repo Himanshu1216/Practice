@@ -45,6 +45,7 @@ const Otp = ({otpLength = 6}) => {
         }
         newotpValue[index] = e.key;
         setotpValue(newotpValue);
+        console.log("hello");
         if(index == otpLength - 1) {
             return;
         }
