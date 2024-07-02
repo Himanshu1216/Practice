@@ -56,3 +56,13 @@ span {
   flex-direction: col;
   height: 100vh;
 }
+
+input {
+  height: 60px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 15%;
+  margin: 5px;
+  font-size: xx-large;
+  text-align: center;
+}
